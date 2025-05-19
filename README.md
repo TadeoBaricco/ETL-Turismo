@@ -1,42 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ETL de Datasets de Dengue en Argentina</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #121212;
-      color: #ffffff;
-      padding: 2rem;
-      line-height: 1.6;
-    }
-    h1, h2 {
-      border-bottom: 2px solid #555;
-      padding-bottom: 0.3rem;
-    }
-    a {
-      color: #4FC3F7;
-      text-decoration: none;
-    }
-    .badges span {
-      display: inline-block;
-      background-color: #1E88E5;
-      color: white;
-      padding: 5px 10px;
-      margin-right: 5px;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-    .badges span.docker { background-color: #0277BD; }
-    .badges span.pgsql { background-color: #37474F; }
-    .badges span.superset { background-color: #EF5350; }
-    .badges span.pgadmin { background-color: #546E7A; }
-    ul {
-      margin-top: 0.5rem;
-    }
-  </style>
   
 </head>
 <body>
@@ -180,16 +141,16 @@ DATABASE_NAME=postgres
 DATABASE_USER=postgres
 DATABASE_PASSWORD=postgres
 POSTGRES_INITDB_ARGS="--auth-host=scram-sha-256 --auth-local=trust"
-
-# Configuración para inicializar postgres
+  
+#Configuración para inicializar postgres
 POSTGRES_PASSWORD=${DATABASE_PASSWORD}
 PGUSER=${DATABASE_USER}
 
-# Configuración para inicializar pgadmin
+#Configuración para inicializar pgadmin
 PGADMIN_DEFAULT_EMAIL=postgres@postgresql.com
 PGADMIN_DEFAULT_PASSWORD=${DATABASE_PASSWORD}
 
-# Configuración para inicializar superset
+#Configuración para inicializar superset
 SUPERSET_SECRET_KEY=your_secret_key_here
 </code></pre>
 <ol start="3">
@@ -241,7 +202,7 @@ SUPERSET_SECRET_KEY=your_secret_key_here
   GROUP BY p.nombre
   ORDER BY saldo DESC;
   </code></pre>
-  <h4>Consulta4: Distribución por medio de transporte utilizado para viajes al exterior</h4>
+  <h4>Consulta 4: Distribución por medio de transporte utilizado para viajes al exterior</h4>
   <pre><code>SELECT mt.nombre AS medio, SUM(viajes_de_turistas_residentes) AS total
   FROM turismo_residentes tr
   JOIN medio_transporte mt ON tr.id_medio_de_transporte = mt.id
