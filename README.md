@@ -1,13 +1,25 @@
   
 </head>
 <body>
-<h1>ETL para la carga de <em>datasets</em> de TURISMO INTERNACIONAL en Argentina</h1>
-<div class="badges">
-    <span class="docker">DOCKER</span>
-    <span class="pgsql">POSTGRESQL</span>
-    <span class="superset">APACHE SUPERSET</span>
-    <span class="pgadmin">PGADMIN</span>
-  </div>
+<h1>ETL para la carga de <em>datasets</em> de Turismo Internacional en Argentina</h1>
+<div style="display: flex; gap: 10px; background-color: #1E1E1E; padding: 10px;">
+  <a href="https://www.docker.com/" style="background-color: #2496ED; color: white; padding: 10px 15px; border-radius: 5px; text-decoration: none; display: flex; align-items: center;">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6AAgAAQAAAABAAABFwAAAAAAAqACAAQAAAABAAABMgAAAAD594EEAAAAJklEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Docker" style="margin-right: 5px;">
+    DOCKER
+  </a>
+  <a href="https://www.postgresql.org/" style="background-color: #336791; color: white; padding: 10px 15px; border-radius: 5px; text-decoration: none; display: flex; align-items: center;">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6AAgAAQAAAABAAABFwAAAAAAAqACAAQAAAABAAABMgAAAAD594EEAAAAJklEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="PostgreSQL" style="margin-right: 5px;">
+    POSTGRESQL
+  </a>
+  <a href="https://superset.apache.org/" style="background-color: #FF6B35; color: white; padding: 10px 15px; border-radius: 5px; text-decoration: none; display: flex; align-items: center;">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6AAgAAQAAAABAAABFwAAAAAAAqACAAQAAAABAAABMgAAAAD594EEAAAAJklEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Apache Superset" style="margin-right: 5px;">
+    APACHE SUPERSET
+  </a>
+  <a href="https://www.pgadmin.org/" style="background-color: #417690; color: white; padding: 10px 15px; border-radius: 5px; text-decoration: none; display: flex; align-items: center;">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6AAgAAQAAAABAAABFwAAAAAAAqACAAQAAAABAAABMgAAAAD594EEAAAAJklEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="pgAdmin" style="margin-right: 5px;">
+    PGADMIN
+  </a>
+</div>
 <h2>Descarga de Datasets</h2>
   <p>Los datasets utilizados en este proyecto pueden descargarse desde el portal oficial de datos abiertos del gobierno de Argentina:<br>
     <a href="https://datos.gob.ar/dataset/turismo-turismo-internacional---total-pais" target="_blank">https://datos.gob.ar/dataset/turismo-turismo-internacional---total-pais</a>
@@ -227,13 +239,13 @@ SUPERSET_SECRET_KEY=your_secret_key_here
 
   ---
 <h4>👥AUTORES</h4>
-<table><tr><td align="center"><a href="https://github.com/celestecst"><img src="https://avatars.githubusercontent.com/u/185005959?v=4"width="115"/><br><sub><b>Celeste Olmedo</b></sub></a></td>
-<td align="center"><a href="https://github.com/aldanaamante"><img src="https://avatars.githubusercontent.com/u/117917749?v=4" width="115"/><br><sub><b>Aldana Amante</b></sub></a></td>
-<td align="center"><a href="https://github.com/TadeoBaricco"><img src="https://avatars.githubusercontent.com/u/180180907?v=4" width="115"/><br><sub><b>Tadeo Baricco</b></sub></a></td>
-<td align="center"><a href="https://github.com/LuisinaRodriguez"><img src="https://avatars.githubusercontent.com/u/204231813?v=4" width="115"/><br><sub><b>Luisina Rodriguez</b></sub></a></td>
-<td align="center"><a href="https://github.com/MiliiCuello19"><img src="https://avatars.githubusercontent.com/u/181528589?v=4" width="115"/><br><sub><b>Milagros Cuello</b></sub></a></td>
-<td align="center"><a href="https://github.com/luubertello"><img src="https://avatars.githubusercontent.com/u/209468073?v=4" width="115"/><br><sub><b>Luciana Bertello</b></sub></a></td>
-<td align="center"><a href="https://github.com/viksvik"><img src="https://avatars.githubusercontent.com/u/204233867?v=4" width="115"/><br><sub><b>Victoria Ocanto</b></sub></a></td>
+<table><tr><td align="center"><a href="https://github.com/celestecst"><img src="https://avatars.githubusercontent.com/u/185005959?v=4"width="112"/><br><sub><b>Celeste Olmedo</b></sub></a></td>
+<td align="center"><a href="https://github.com/aldanaamante"><img src="https://avatars.githubusercontent.com/u/117917749?v=4" width="112"/><br><sub><b>Aldana Amante</b></sub></a></td>
+<td align="center"><a href="https://github.com/TadeoBaricco"><img src="https://avatars.githubusercontent.com/u/180180907?v=4" width="112"/><br><sub><b>Tadeo Baricco</b></sub></a></td>
+<td align="center"><a href="https://github.com/LuisinaRodriguez"><img src="https://avatars.githubusercontent.com/u/204231813?v=4" width="112"/><br><sub><b>Luisina Rodriguez</b></sub></a></td>
+<td align="center"><a href="https://github.com/MiliiCuello19"><img src="https://avatars.githubusercontent.com/u/181528589?v=4" width="112"/><br><sub><b>Milagros Cuello</b></sub></a></td>
+<td align="center"><a href="https://github.com/luubertello"><img src="https://avatars.githubusercontent.com/u/209468073?v=4" width="112"/><br><sub><b>Luciana Bertello</b></sub></a></td>
+<td align="center"><a href="https://github.com/viksvik"><img src="https://avatars.githubusercontent.com/u/204233867?v=4" width="112"/><br><sub><b>Victoria Ocanto</b></sub></a></td>
 </tr></table>
 
   
