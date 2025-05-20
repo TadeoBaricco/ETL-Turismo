@@ -1,19 +1,30 @@
-  
+
 </head>
 <body>
 <h1>ETL para la carga de <em>datasets</em> de Turismo Internacional en Argentina</h1>
-<div style="display: flex; gap: 8px; margin-bottom: 16px;">
+<div style="display: flex; gap: 10px; font-family: sans-serif;">
   <a href="https://www.docker.com/" target="_blank" style="text-decoration: none;">
-    <span style="background-color: #2496ed; color: white; padding: 6px 12px; border-radius: 4px; font-weight: bold; font-family: sans-serif;">🐳 DOCKER</span>
+    <div style="background-color:#2496ed; color:white; padding:10px 16px; border-radius:6px; display:flex; align-items:center; gap:8px;">
+      🐳 <strong>DOCKER</strong>
+    </div>
   </a>
+  
   <a href="https://www.postgresql.org/" target="_blank" style="text-decoration: none;">
-    <span style="background-color: #336791; color: white; padding: 6px 12px; border-radius: 4px; font-weight: bold; font-family: sans-serif;">🐘 POSTGRESQL</span>
+    <div style="background-color:#336791; color:white; padding:10px 16px; border-radius:6px; display:flex; align-items:center; gap:8px;">
+      🐘 <strong>POSTGRESQL</strong>
+    </div>
   </a>
+
   <a href="https://superset.apache.org/" target="_blank" style="text-decoration: none;">
-    <span style="background-color: #ff5733; color: white; padding: 6px 12px; border-radius: 4px; font-weight: bold; font-family: sans-serif;">🔗 APACHE SUPERSET</span>
+    <div style="background-color:#f44336; color:white; padding:10px 16px; border-radius:6px; display:flex; align-items:center; gap:8px;">
+      🔗 <strong>APACHE SUPERSET</strong>
+    </div>
   </a>
+
   <a href="https://www.pgadmin.org/" target="_blank" style="text-decoration: none;">
-    <span style="background-color: #4f628e; color: white; padding: 6px 12px; border-radius: 4px; font-weight: bold; font-family: sans-serif;">🐘 PGADMIN</span>
+    <div style="background-color:#4479A1; color:white; padding:10px 16px; border-radius:6px; display:flex; align-items:center; gap:8px;">
+      🐘 <strong>PGADMIN</strong>
+    </div>
   </a>
 </div>
 <h2>Descarga de Datasets</h2>
@@ -160,12 +171,12 @@ cd ETL-Turismo
   </code></pre>
 <ol start="3">
   <li><strong>Levantar los servicios:</strong> Ejecuta los siguientes comandos para iniciar los contenedores:</li>
-  <pre><code>docker compose up -d
+<pre><code>docker compose up -d
 . init.sh
-  </code></pre>
+</code></pre>
 </ol>
 <ol start="4">
-  <li><strong>Levantar los servicios>:</strong></li>
+  <li><strong>Acceso a las herramientas:>:</strong></li>
   <ul>
         <li>
             Apache Superset: <a href="http://localhost:8088/">http://localhost:8088/</a><br>
