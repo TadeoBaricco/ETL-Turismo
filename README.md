@@ -74,9 +74,6 @@
 </ul>
 <h2>Servicios Definidos en Docker Compose</h2>
 <p>El archivo <code>docker-compose.yml</code> define los siguientes servicios:</p>
-<h2>Servicios Definidos en Docker Compose</h2>
-<p>El archivo <code>docker-compose.yml</code> define los siguientes servicios:</p>
-
 <ol>
   <li><strong>Base de Datos (PostgreSQL):</strong></li>
 </ol>
@@ -176,7 +173,7 @@ cd ETL-Turismo
 </code></pre>
 </ol>
 <ol start="4">
-  <li><strong>Acceso a las herramientas:>:</strong></li>
+  <li><strong>Acceso a las herramientas:</strong></li>
   <ul>
         <li>
             Apache Superset: <a href="http://localhost:8088/">http://localhost:8088/</a><br>
