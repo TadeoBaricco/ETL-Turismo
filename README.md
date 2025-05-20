@@ -2,26 +2,22 @@
 </head>
 <body>
 <h1>ETL para la carga de <em>datasets</em> de Turismo Internacional en Argentina</h1>
-<div style="display: flex; gap: 10px; background-color: #1E1E1E; padding: 10px;">
-  <a href="https://www.docker.com/" style="background-color: #2496ED; color: white; padding: 10px 15px; border-radius: 5px; text-decoration: none; display: flex; align-items: center;">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6AAgAAQAAAABAAABFwAAAAAAAqACAAQAAAABAAABMgAAAAD594EEAAAAJklEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Docker" style="margin-right: 5px;">
-    DOCKER
+<div style="display: flex; gap: 8px; margin-bottom: 16px;">
+  <a href="https://www.docker.com/" target="_blank" style="text-decoration: none;">
+    <span style="background-color: #2496ed; color: white; padding: 6px 12px; border-radius: 4px; font-weight: bold; font-family: sans-serif;">🐳 DOCKER</span>
   </a>
-  <a href="https://www.postgresql.org/" style="background-color: #336791; color: white; padding: 10px 15px; border-radius: 5px; text-decoration: none; display: flex; align-items: center;">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6AAgAAQAAAABAAABFwAAAAAAAqACAAQAAAABAAABMgAAAAD594EEAAAAJklEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="PostgreSQL" style="margin-right: 5px;">
-    POSTGRESQL
+  <a href="https://www.postgresql.org/" target="_blank" style="text-decoration: none;">
+    <span style="background-color: #336791; color: white; padding: 6px 12px; border-radius: 4px; font-weight: bold; font-family: sans-serif;">🐘 POSTGRESQL</span>
   </a>
-  <a href="https://superset.apache.org/" style="background-color: #FF6B35; color: white; padding: 10px 15px; border-radius: 5px; text-decoration: none; display: flex; align-items: center;">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6AAgAAQAAAABAAABFwAAAAAAAqACAAQAAAABAAABMgAAAAD594EEAAAAJklEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="Apache Superset" style="margin-right: 5px;">
-    APACHE SUPERSET
+  <a href="https://superset.apache.org/" target="_blank" style="text-decoration: none;">
+    <span style="background-color: #ff5733; color: white; padding: 6px 12px; border-radius: 4px; font-weight: bold; font-family: sans-serif;">🔗 APACHE SUPERSET</span>
   </a>
-  <a href="https://www.pgadmin.org/" style="background-color: #417690; color: white; padding: 10px 15px; border-radius: 5px; text-decoration: none; display: flex; align-items: center;">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6AAgAAQAAAABAAABFwAAAAAAAqACAAQAAAABAAABMgAAAAD594EEAAAAJklEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="pgAdmin" style="margin-right: 5px;">
-    PGADMIN
+  <a href="https://www.pgadmin.org/" target="_blank" style="text-decoration: none;">
+    <span style="background-color: #4f628e; color: white; padding: 6px 12px; border-radius: 4px; font-weight: bold; font-family: sans-serif;">🐘 PGADMIN</span>
   </a>
 </div>
 <h2>Descarga de Datasets</h2>
-  <p>Los datasets utilizados en este proyecto pueden descargarse desde el portal oficial de datos abiertos del gobierno de Argentina:<br>
+  <p>Los datasets utilizados en este proyecto pueden descargarse desde el portal oficial de datos abiertos del Gobierno de Argentina:<br>
     <a href="https://datos.gob.ar/dataset/turismo-turismo-internacional---total-pais" target="_blank">https://datos.gob.ar/dataset/turismo-turismo-internacional---total-pais</a>
   </p>
   <p>Este portal proporciona información pública en formatos reutilizables, incluyendo datos relacionados con el Turismo Internacional - Total País en Argentina.</p>
@@ -44,7 +40,7 @@
   <li>Visualización de Datos</li>
 </ul>
   <h2>Mantenido Por</h2>
-  <p>Grupo 8</p>
+  <p>Grupo 8 - Cátedra Base de Datos 2025</p>
   <h2>Descargo de Responsabilidad</h2>
   <p>El código proporcionado se ofrece "tal cual", sin garantía de ningún tipo, expresa o implícita. En ningún caso los autores o titulares de derechos de autor serán responsables de cualquier reclamo, daño u otra responsabilidad.</p>
   <h2>Descripción del Proyecto</h2>
@@ -73,7 +69,7 @@
 <ol>
   <li><strong>Base de Datos (PostgreSQL):</strong></li>
 </ol>
-<pre><code>networks:
+  <pre><code>networks:
   net:
     external: false
 
@@ -102,12 +98,12 @@ services:
       - ./DATOS:/DATOS
     networks:
       - net
-</code></pre>
+  </code></pre>
 
 <ol start="2">
   <li><strong>Apache Superset:</strong></li>
 </ol>
-<pre><code>image: apache/superset:4.0.0
+  <pre><code>image: apache/superset:4.0.0
 restart: unless-stopped
 env_file:
   - .env.db
@@ -118,12 +114,12 @@ depends_on:
     condition: service_healthy
 networks:
   - net
-</code></pre>
+  </code></pre>
 
 <ol start="3">
   <li><strong>pgAdmin:</strong></li>
 </ol>
-<pre><code>image: dpage/pgadmin4
+  <pre><code>image: dpage/pgadmin4
 restart: unless-stopped
 env_file:
   - .env.db
@@ -134,42 +130,39 @@ depends_on:
     condition: service_healthy
 networks:
   - net
-</code></pre>
+  </code></pre>
 
 <h2>Instrucciones de Configuración</h2>
 <ol>
   <li><strong>Clonar el repositorio:</strong></li>
 </ol>
-<pre><code>git clone &lt;URL_DEL_REPOSITORIO&gt;
+  <pre><code>git clone &lt;URL_DEL_REPOSITORIO&gt;
 cd ETL-Turismo
-</code></pre>
+  </code></pre>
 <ol start="2">
   <li><strong>Configurar el archivo <code>.env.db</code>:</strong> Crea un archivo <code>.env.db</code> en la raíz del proyecto con las siguientes variables de entorno:</li>
 </ol>
-<pre><code>#Definimos cada variable
-DATABASE_HOST=db
-DATABASE_PORT=5432
-DATABASE_NAME=postgres
-DATABASE_USER=postgres
-DATABASE_PASSWORD=postgres
-POSTGRES_INITDB_ARGS="--auth-host=scram-sha-256 --auth-local=trust"
-  
-#Configuración para inicializar postgres
-POSTGRES_PASSWORD=${DATABASE_PASSWORD}
-PGUSER=${DATABASE_USER}
-
-#Configuración para inicializar pgadmin
-PGADMIN_DEFAULT_EMAIL=postgres@postgresql.com
-PGADMIN_DEFAULT_PASSWORD=${DATABASE_PASSWORD}
-
-#Configuración para inicializar superset
-SUPERSET_SECRET_KEY=your_secret_key_here
-</code></pre>
+  <pre><code><span style="color:#999">#Definimos cada variable</span>
+<span style="color:#f08d49">DATABASE_HOST</span>=<span style="color:#ccc">db</span>
+<span style="color:#f08d49">DATABASE_PORT</span>=<span style="color:#ccc">5432</span>
+<span style="color:#f08d49">DATABASE_NAME</span>=<span style="color:#ccc">postgres</span>
+<span style="color:#f08d49">DATABASE_USER</span>=<span style="color:#ccc">postgres</span>
+<span style="color:#f08d49">DATABASE_PASSWORD</span>=<span style="color:#ccc">postgres</span>
+<span style="color:#f08d49">POSTGRES_INITDB_ARGS</span>=<span style="color:#6ab0f3">"--auth-host=scram-sha-256 --auth-local=trust"</span>
+<span style="color:#999"># Configuración para inicializar postgres</span>
+<span style="color:#f08d49">POSTGRES_PASSWORD</span>=<span style="color:#6ab0f3">${DATABASE_PASSWORD}</span>
+<span style="color:#f08d49">PGUSER</span>=<span style="color:#6ab0f3">${DATABASE_USER}</span>
+<span style="color:#999"># Configuración para inicializar pgadmin</span>
+<span style="color:#f08d49">PGADMIN_DEFAULT_EMAIL</span>=<span style="color:#6ab0f3">postgres@postgresql.com</span>
+<span style="color:#f08d49">PGADMIN_DEFAULT_PASSWORD</span>=<span style="color:#6ab0f3">${DATABASE_PASSWORD}</span>
+<span style="color:#999"># Configuración para inicializar superset</span>
+<span style="color:#f08d49">SUPERSET_SECRET_KEY</span>=<span style="color:#6ab0f3">your_secret_key_here</span>
+  </code></pre>
 <ol start="3">
-  <li><strong>Levantar los servicios>:</strong> Ejecuta los siguientes comandos para iniciar los contenedores:</li>
+  <li><strong>Levantar los servicios:</strong> Ejecuta los siguientes comandos para iniciar los contenedores:</li>
   <pre><code>docker compose up -d
 . init.sh
-</code></pre>
+  </code></pre>
 </ol>
 <ol start="4">
   <li><strong>Levantar los servicios>:</strong></li>
@@ -189,15 +182,15 @@ SUPERSET_SECRET_KEY=your_secret_key_here
         <p>Accede a Apache Superset y crea una conexión a la base de datos PostgreSQL en la sección <span class="settings-text">Settings</span>. Asegúrate de que la conexión sea exitosa antes de proceder.</p>
 <h3>2. Consultas SQL</h3>
   <h4>Consulta 1: Top 5 países que más turistas enviaron a Argentina</h4>
-  <pre><code>SELECT p.nombre, SUM(tnr.viajes_de_turistas_no_residentes) AS total_viajes
+    <pre><code>SELECT p.nombre, SUM(tnr.viajes_de_turistas_no_residentes) AS total_viajes
   FROM turismo_no_residentes tnr
   JOIN pais p ON tnr.id_pais_origen = p.id
   GROUP BY p.nombre
   ORDER BY total_viajes DESC
   LIMIT 5;
-  </code></pre>
+    </code></pre>
   <h4>Consulta 2: Ranking de países con mayor diferencia entre residentes que los visitan y turistas que envían</h4>
-   <pre><code>SELECT p.nombre,
+     <pre><code>SELECT p.nombre,
     COALESCE(SUM(tr.viajes_de_turistas_residentes), 0) AS emisivo,
     COALESCE(SUM(tnr.viajes_de_turistas_no_residentes), 0) AS receptivo,
     COALESCE(SUM(tnr.viajes_de_turistas_no_residentes), 0) -       COALESCE(SUM(tr.viajes_de_turistas_residentes), 0) AS diferencia
@@ -206,36 +199,44 @@ SUPERSET_SECRET_KEY=your_secret_key_here
     LEFT JOIN turismo_no_residentes tnr ON tnr.id_pais_origen = p.id
     GROUP BY p.nombre
     ORDER BY diferencia DESC;
-    </code></pre>
+      </code></pre>
   <h4>Consulta 3: Países con mayor déficit o superávit turístico</h4>
-  <pre><code> SELECT p.nombre, SUM(bt.balanza) AS saldo
+    <pre><code> SELECT p.nombre, SUM(bt.balanza) AS saldo
   FROM balanza_turistica bt
   JOIN pais p ON bt.id_pais = p.id
   GROUP BY p.nombre
   ORDER BY saldo DESC;
-  </code></pre>
+    </code></pre>
   <h4>Consulta 4: Distribución por medio de transporte utilizado para viajes al exterior</h4>
-  <pre><code>SELECT mt.nombre AS medio, SUM(viajes_de_turistas_residentes) AS total
+    <pre><code>SELECT mt.nombre AS medio, SUM(viajes_de_turistas_residentes) AS total
   FROM turismo_residentes tr
   JOIN medio_transporte mt ON tr.id_medio_de_transporte = mt.id
   GROUP BY mt.nombre
   ORDER BY total DESC;
-  </code></pre>
+    </code></pre>
   <h3>3. Creación de Gráficos y Tableros</h3>
-  <p>1. Ejecuta las consultas en SQL Lab de Apache Superset.</p>
-  <p>2. Haz clic en el botón CREATE CHART para crear gráficos interactivos.</p>
-  <p>3. Configura el tipo de gráfico y las dimensiones necesarias.</p>
-  <p>4. Guarda el gráfico en un tablero con el botón SAVE.</p>
+  <ol>
+  <li><strong>Ejecuta las consultas en <code>SQL Lab</code> de Apache Superset.</strong></li>
+</ol>
+ <ol start="2">
+  <li><strong>Haz clic en el botón <code>CREATE CHART</code> para crear gráficos interactivos.</strong></li>
+</ol>
+<ol start="3">
+  <li><strong>Configura el tipo de gráfico y las dimensiones necesarias.</strong></li>
+</ol>
+<ol start="4">
+  <li><strong>Guarda el gráfico en un tablero con el botón <code>SAVE</code>.</strong></li>
+</ol>
   <h2>Estructura del Proyecto</h2>
-  <pre><code>
+    <pre><code>
   ETL-Turismo/
     ├── docker-compose.yml       # Configuración de Docker Compose
-    ├──scripts     #Carpeta contenedora del script de la base de datos
+    ├──scripts                   #Carpeta contenedora del script de la base de datos
     ├── init.sh                  # Script de inicialización de base de datos
-    ├──env.db                 #Variables de entorno
-    ├── DATOS/                    # Carpeta para almacenar datasets
+    ├──env.db                    #Variables de entorno
+    ├── DATOS/                   # Carpeta para almacenar datasets
     └── README.md                # Documentación del proyecto
-  </code></pre>
+    </code></pre>
 
   ---
 <h4>👥AUTORES</h4>
